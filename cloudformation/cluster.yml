@@ -1,5 +1,4 @@
 Description: >
-  Felix Lutze / Capstone Project
   Creates an Amazon EKS Cluster
 Parameters:
   EnvironmentName:
@@ -13,12 +12,12 @@ Parameters:
 
   MaxSize:
     Description: Maximum number of web application servers
-    Default: 2
+    Default: 3
     Type: String
 
   DesiredSize:
     Description: How many instances should be created.
-    Default: 1
+    Default: 2
     Type: Number
 
   KeyPairName:

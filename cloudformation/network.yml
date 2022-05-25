@@ -1,6 +1,5 @@
 ---
 Description: >
-  Capstone Project
   Creates a VPC with public subnets for EKS.
 
 Parameters:

@@ -1,7 +1,7 @@
 [
   "EnvironmentName=capstone-project",
   "MinSize=1",
-  "MaxSize=2",
-  "DesiredSize=1",
+  "MaxSize=3",
+  "DesiredSize=2",
   "KeyPairName=udacity"
 ]
