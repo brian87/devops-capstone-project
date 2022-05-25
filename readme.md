@@ -13,7 +13,7 @@ Capstone project for Cloud DevOps Engineer Nanodegree at Udacity.
 
 The application is a simple Flesk project based on python that display a html page with the text "Let's rock CI/CD". The base image is python:3.7-alpine
 
-## Kubernetes Cluster
+## Cloud Formation
 
 AWS CloudFormation was used to build the Kubernetes Cluster.
 - **VPC and Networking**, to setup VPC, Subnets
@@ -26,12 +26,24 @@ AWS CloudFormation was used to build the Kubernetes Cluster.
 ### EC2 intances
 ![EC2 Instances](./screenshots/cf.png)
 
-#### List of deployed Stacks:
-
-#### List of deployed Instances:
-
-## CircleCi - CI/CD Pipelines
+## CircleCi Pipeline
+![CircleCi Pipeline](./screenshots/ci.png)
 
 ## Linting using Pylint and Hadolint
+![CircleCi Pipeline](./screenshots/lint.png)
 
+## Ansible
+Ansible playbooks were use to configure the cluster and the management instance
+![Ansible](./screenshots/ansi.png)
+
+## Kubernetes Cluster
+After deployment, the cluster can be inspected using kubectl
+![Kubectl](./screenshots/k.png)
+
+## Access the Application
+Using the endpoint created for the K8S service
+![Endpoint](./screenshots/dns.png)
+
+Access the application using a browser
+![Application](./screenshots/app.png)
 
