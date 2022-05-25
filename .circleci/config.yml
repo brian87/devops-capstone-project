@@ -146,6 +146,8 @@ jobs:
               then
                 cat ~/inventory.txt
                 echo "Our management instances are already configured."
+                cd ansible
+                ansible-playbook -vv -i ~/inventory.txt configure-server.yml
               else
                 cat ~/inventory.txt
                 cd ansible
