@@ -1,6 +1,6 @@
 ---
 - name: "Download The AWS CLI Archive"
-  shell: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o awscliv2.zip"
+  shell: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   args:
     chdir: /home/ubuntu
 
