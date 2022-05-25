@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: capstone-project-app
-          image: brian87/ml-api
+          image: brian87/ml-api:latest
           ports:
             - containerPort: 80
