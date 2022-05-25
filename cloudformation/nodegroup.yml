@@ -54,7 +54,7 @@ Resources:
       NodeRole: !GetAtt NodeInstanceRole.Arn
       NodegroupName: !Sub ${EnvironmentName}-nodegroup
       InstanceTypes:
-        - t2.micro
+        - t3.medium
       ScalingConfig:
         MinSize: !Ref MinSize
         MaxSize: !Ref MaxSize
