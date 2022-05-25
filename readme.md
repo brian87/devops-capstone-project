@@ -16,11 +16,15 @@ The application is a simple Flesk project based on python that display a html pa
 ## Kubernetes Cluster
 
 AWS CloudFormation was used to build the Kubernetes Cluster.
-![CloudFormation](./screenshots/cf.png)
 - **VPC and Networking**, to setup VPC, Subnets
 - **EKS** to craete the Kubernetes Cluster and Nodes
-
 - **Management** and EC2 Instance used to configure and manage the Cluster 
+
+### Stacks
+![CloudFormation](./screenshots/cf.png)
+
+### EC2 intances
+![EC2 Instances](./screenshots/cf.png)
 
 #### List of deployed Stacks:
 
