@@ -145,8 +145,6 @@ jobs:
             if grep -q "No changes to deploy" ~/checkIfDeployed.txt
               then
                 cat ~/inventory.txt
-                cd ansible
-                ansible-playbook -vvv -i ~/inventory.txt configure-server.yml
                 echo "Our management instances are already configured."
               else
                 cat ~/inventory.txt
@@ -175,6 +173,8 @@ jobs:
               then
                 cat ~/inventory.txt
                 echo "Our management instances are already configured."
+                cd ansible
+                ansible-playbook -v -i ~/inventory.txt configure-cluster.yml
               else
                 cat ~/inventory.txt
                 cd ansible
@@ -197,7 +197,7 @@ jobs:
           command: |
             cat ~/inventory.txt
             cd ansible
-            ansible-playbook -vvv -i ~/inventory.txt save-elb-dns.yml
+            ansible-playbook -v -i ~/inventory.txt save-elb-dns.yml
             cat ~/elb_dns.txt
       - persist_to_workspace:
           root: ~/
