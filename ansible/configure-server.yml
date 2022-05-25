@@ -10,7 +10,7 @@
         name: [ "unzip" ]
         state: latest
         update_cache: yes
-        
+
   roles:
     - install-awscli
     - install-kubectl
@@ -39,7 +39,6 @@
   become: yes
   vars:
     AWS_DEFAULT_REGION: "{{ lookup('env', 'AWS_DEFAULT_REGION') }}"
-    ENVIRONMENT_NAME: "{{ lookup('env', 'ENVIRONMENT_NAME') }}"
   pre_tasks:
     - name: Create a kubeconfig file for the cluster
-      shell: "aws eks update-kubeconfig --region {{ AWS_DEFAULT_REGION }} --name {{ ENVIRONMENT_NAME }}-cluster"
+      shell: "aws eks update-kubeconfig --region {{ AWS_DEFAULT_REGION }} --name capstone-project-cluster"

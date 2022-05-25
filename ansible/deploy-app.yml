@@ -4,15 +4,14 @@
   gather_facts: false
   become: yes
   vars:
-    ENVIRONMENT_NAME: "{{ lookup('env', 'ENVIRONMENT_NAME') }}"
     CIRCLE_WORKFLOW_ID: "{{ lookup('env', 'CIRCLE_WORKFLOW_ID') }}"
   tasks:
     - name: Update the deployment to run the latest Build
-      shell: "./bin/kubectl set image deployments/{{ ENVIRONMENT_NAME }}-deployment {{ ENVIRONMENT_NAME }}-app=brian87/{{ ENVIRONMENT_NAME }}:{{ CIRCLE_WORKFLOW_ID }}"
+      shell: "./bin/kubectl set image deployments/capstone-project-deployment capstone-project-app=brian87/ml-api:{{ CIRCLE_WORKFLOW_ID }}"
       args:
         chdir: $HOME
 
     - name: Check if deployment ist successful
-      shell: "./bin/kubectl rollout status deployments/{{ ENVIRONMENT_NAME }}-deployment"
+      shell: "./bin/kubectl rollout status deployments/capstone-project-deployment"
       args:
         chdir: $HOME
