@@ -149,7 +149,7 @@ jobs:
               else
                 cat ~/inventory.txt
                 cd ansible
-                ansible-playbook -vvv -i ~/inventory.txt configure-server.yml
+                ansible-playbook -vv -i ~/inventory.txt configure-server.yml
               fi
 
   configure-cluster:
@@ -173,12 +173,10 @@ jobs:
               then
                 cat ~/inventory.txt
                 echo "Our management instances are already configured."
-                cd ansible
-                ansible-playbook -v -i ~/inventory.txt configure-cluster.yml
               else
                 cat ~/inventory.txt
                 cd ansible
-                ansible-playbook -vvv -i ~/inventory.txt configure-cluster.yml
+                ansible-playbook -vv -i ~/inventory.txt configure-cluster.yml
               fi
       - run:
           name: Wait for LoadBalancer's domain to become reachable
@@ -197,7 +195,7 @@ jobs:
           command: |
             cat ~/inventory.txt
             cd ansible
-            ansible-playbook -v -i ~/inventory.txt save-elb-dns.yml
+            ansible-playbook -vv -i ~/inventory.txt save-elb-dns.yml
             cat ~/elb_dns.txt
       - persist_to_workspace:
           root: ~/
@@ -223,7 +221,7 @@ jobs:
           command: |
             cat ~/inventory.txt
             cd ansible
-            ansible-playbook -vvv -i ~/inventory.txt deploy-app.yml
+            ansible-playbook -vv -i ~/inventory.txt deploy-app.yml
           no_output_timeout: 2m
 
 workflows:
