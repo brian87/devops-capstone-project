@@ -13,6 +13,9 @@ Capstone project for Cloud DevOps Engineer Nanodegree at Udacity.
 
 The application is a simple Flesk project based on python that display a html page with the text "Let's rock CI/CD". The base image is python:3.7-alpine
 
+## Git Repository
+https://github.com/brian87/devops-capstone-project
+
 ## Cloud Formation
 
 AWS CloudFormation was used to build the Kubernetes Cluster.
