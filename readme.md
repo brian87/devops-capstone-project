@@ -8,18 +8,19 @@ Capstone project for Cloud DevOps Engineer Nanodegree at Udacity.
 - Working with Ansible and CloudFormation to deploy clusters
 - Building Kubernetes clusters
 - Building Docker containers in pipelines
-- Working in AWS
 
 ## Application
 
-The Application is based on lesson "Microservices at Scale using AWS & Kubernetes" a machine learning model that has been trained to predict housing prices in Boston
+The application is a simple Flesk project based on python that display a html page with the text "Let's rock CI/CD". The base image is python:3.7-alpine
 
 ## Kubernetes Cluster
 
-I used AWS CloudFormation to deploy the Kubernetes Cluster.
-- **VPC and Networkin**, to setup VPC, Subnets
+AWS CloudFormation was used to build the Kubernetes Cluster.
+![CloudFormation](./screenshots/cf.png)
+- **VPC and Networking**, to setup VPC, Subnets
 - **EKS** to craete the Kubernetes Cluster and Nodes
-- **Management** used to configure and manage the Cluster 
+
+- **Management** and EC2 Instance used to configure and manage the Cluster 
 
 #### List of deployed Stacks:
 
