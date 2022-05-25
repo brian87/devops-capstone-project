@@ -1,4 +1,7 @@
-FROM python:3.7.3-stretch
+FROM python:3.7-alpine
+
+RUN apk update
+RUN apk add build-base
 
 ## Step 1:
 # Create a working directory
@@ -11,8 +14,7 @@ COPY . app.py /app/
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
+RUN pip3 install --no-cache-dir  -r requirements.txt
 
 ## Step 4:
 # Expose port 80
