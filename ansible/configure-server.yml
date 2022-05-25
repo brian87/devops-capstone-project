@@ -2,6 +2,7 @@
 - name: "Install dependencies"
   hosts: management
   user: ubuntu
+  become_user: ubuntu
   gather_facts: false
   become: yes
   pre_tasks:
@@ -18,6 +19,7 @@
 - name: "Authenticate AWS CLI with AWS"
   hosts: management
   user: ubuntu
+  become_user: ubuntu
   gather_facts: false
   become: yes
   vars:
@@ -35,6 +37,7 @@
 - name: "Fetch kubectl config"
   hosts: management
   user: ubuntu
+  become_user: ubuntu
   gather_facts: false
   become: yes
   vars:
