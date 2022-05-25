@@ -142,6 +142,7 @@ jobs:
       - run:
           name: Configure server
           command: |
+            cd ansible
             ansible-playbook -i ~/inventory.txt configure-server.yml
             if grep -q "No changes to deploy" ~/checkIfDeployed.txt
               then
