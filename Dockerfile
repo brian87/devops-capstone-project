@@ -1,7 +1,8 @@
 FROM python:3.7-alpine
 
 RUN apk update
-RUN apk add build-base=0.5-r2
+RUN apk --no-cache add build-base=0.5-r2
+RUN rm -rf /var/cache/apk/* 
 
 ## Step 1:
 # Create a working directory
@@ -14,7 +15,7 @@ COPY . app.py /app/
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip install --no-cache --trusted-host pypi.python.org -r requirements.txt
+RUN pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
 
 ## Step 4:
 # Expose port 80
