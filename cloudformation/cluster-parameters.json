@@ -1,5 +1,5 @@
 [
-  "EnvironmentName=capstone-project"
+  "EnvironmentName=capstone-project",
   "MinSize=1",
   "MaxSize=2",
   "DesiredSize=1",
