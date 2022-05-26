@@ -1,7 +1,7 @@
 FROM python:3.7-alpine
 
 RUN apk update
-RUN apk --no-cache add build-base
+RUN apk --no-cache add build-base=0.5-r2
 RUN rm -rf /var/cache/apk/* 
 
 ## Step 1:
