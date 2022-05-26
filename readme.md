@@ -32,8 +32,16 @@ AWS CloudFormation was used to build the Kubernetes Cluster.
 ## CircleCi Pipeline
 ![CircleCi Pipeline](./screenshots/ci.png)
 
-## Linting using Pylint and Hadolint
+## Linting passing for Pylint and Hadolint
 ![CircleCi Pipeline](./screenshots/lint.png)
+
+## Linting failing using Pylint
+![CircleCi Pipeline](./screenshots/plci.png)
+![CircleCi Pipeline](./screenshots/pl.png)
+
+## Linting failing using Hadolint
+![CircleCi Pipeline](./screenshots/hlci.png)
+![CircleCi Pipeline](./screenshots/hl.png)
 
 ## Ansible
 Ansible playbooks were use to configure the cluster and the management instance
